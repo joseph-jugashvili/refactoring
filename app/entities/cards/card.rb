@@ -16,11 +16,11 @@ class Card
   end
 
   def put_tax(_amount)
-    self::PUT_TAX
+    self.class::PUT_TAX
   end
 
   def send_tax(_amount)
-    self::SEND_TAX
+    self.class::SEND_TAX
   end
 
   def self.type
