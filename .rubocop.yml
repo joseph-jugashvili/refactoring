@@ -33,3 +33,8 @@ Documentation:
 
 FrozenStringLiteralComment:
   Enabled: false
+
+Style/EndOfLine:
+  EnforcedStyle: lf
+  Enabled: False
+  
