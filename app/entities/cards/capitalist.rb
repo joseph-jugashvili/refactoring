@@ -3,7 +3,7 @@ class Capitalist < Card
   BALANCE = 100
   PART_WITHDRAW_TAX = 0.04
   PUT_TAX = 10
-  PART_SEND_TAX = 0.1
+  SEND_TAX = 0.1
 
   def initialize(balance = BALANCE)
     super(TYPE, balance)
@@ -18,6 +18,6 @@ class Capitalist < Card
   end
 
   def send_tax(amount)
-    amount * PART_SEND_TAX
+    amount * SEND_TAX
   end
 end

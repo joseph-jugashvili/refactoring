@@ -2,13 +2,10 @@ class Card
   attr_reader :type, :card_number
   attr_accessor :balance
 
-  BALANCE = 0
   CARD_NUMBER_LENGTH = 16
   CARD_NUMBER_RANGE = (0..9).freeze
-  PUT_TAX = 1
-  SEND_TAX = 1
 
-  def initialize(type, balance = BALANCE)
+  def initialize(type, balance = nil)
     @type = type
     @balance = balance
     @card_number = Array.new(CARD_NUMBER_LENGTH) { rand(CARD_NUMBER_RANGE) }.join
@@ -18,12 +15,12 @@ class Card
     amount
   end
 
-  def put_tax(amount = 0)
-    amount
+  def put_tax(_amount)
+    self::PUT_TAX
   end
 
-  def send_tax(amount = 0)
-    amount
+  def send_tax(_amount)
+    self::SEND_TAX
   end
 
   def self.type

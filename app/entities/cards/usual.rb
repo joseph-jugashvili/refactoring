@@ -2,7 +2,7 @@ class Usual < Card
   TYPE = name.downcase
   BALANCE = 50
   PART_WITHDRAW_TAX = 0.05
-  PART_PUT_TAX = 0.02
+  PUT_TAX = 0.02
   SEND_TAX = 20
 
   def initialize(balance = BALANCE)
@@ -14,7 +14,7 @@ class Usual < Card
   end
 
   def put_tax(amount)
-    amount * PART_PUT_TAX
+    amount * PUT_TAX
   end
 
   def send_tax(_amount)
