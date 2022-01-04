@@ -6,7 +6,7 @@ class Card
 
   CARD_NUMBER_LENGTH = 16
   CARD_NUMBER_RANGE = (0..9).freeze
-  
+
   def initialize(balance = nil)
     @type = self.class.to_s.downcase
     @balance = balance || self.class::BALANCE
@@ -26,7 +26,7 @@ class Card
   end
 
   def self.type
-    self.to_s.downcase
+    to_s.downcase
   end
 
   def withdraw_money(amount)
