@@ -9,6 +9,7 @@ group :development do
   gem 'i18n', '~> 1.8.10'
   gem 'rubocop', '~> 1.7', require: false
   gem 'rubocop-rspec', '~> 2.4.0', require: false
+  gem 'pry', '~> 0.13.1'
 end
 
 group :test do

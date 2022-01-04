@@ -1,13 +1,15 @@
+require 'pry'
+
 class Card
   attr_reader :type, :card_number
   attr_accessor :balance
 
   CARD_NUMBER_LENGTH = 16
   CARD_NUMBER_RANGE = (0..9).freeze
-
-  def initialize(type, balance = nil)
-    @type = type
-    @balance = balance
+  
+  def initialize(balance = nil)
+    @type = self.class.to_s.downcase
+    @balance = balance || self.class::BALANCE
     @card_number = Array.new(CARD_NUMBER_LENGTH) { rand(CARD_NUMBER_RANGE) }.join
   end
 
@@ -24,7 +26,7 @@ class Card
   end
 
   def self.type
-    self::TYPE
+    self.to_s.downcase
   end
 
   def withdraw_money(amount)
