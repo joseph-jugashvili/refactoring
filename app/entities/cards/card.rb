@@ -1,5 +1,3 @@
-require 'pry'
-
 class Card
   attr_reader :type, :card_number
   attr_accessor :balance

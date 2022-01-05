@@ -11,8 +11,4 @@ class Usual < Card
   def put_tax(amount)
     amount * PUT_TAX
   end
-
-  def send_tax
-    SEND_TAX
-  end
 end

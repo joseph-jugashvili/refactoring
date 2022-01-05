@@ -7,12 +7,4 @@ class Virtual < Card
   def withdraw_tax(amount)
     amount * PART_WITHDRAW_TAX
   end
-
-  def put_tax(_amount)
-    PUT_TAX
-  end
-
-  def send_tax
-    SEND_TAX
-  end
 end
